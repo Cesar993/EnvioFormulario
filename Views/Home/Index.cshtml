@@ -1,0 +1,33 @@
+﻿@model User
+<h1>Formulario de Usuario</h1>
+<form method="post" action="/usuario/registrar">
+    <div>
+        <label asp-for="Nombre">Nombre:</label>
+        <input type="text" id="Nombre" asp-for="Nombre" />
+        <span asp-validation-for="Nombre"></span>
+    </div>
+    <div>
+        <label asp-for="Apellido">Apellido:</label>
+        <input type="text" id="Apellido" asp-for="Apellido" />
+        <span asp-validation-for="Apellido"></span>
+    </div>
+    <div>
+        <label asp-for="Edad">Edad:</label>
+        <input type="number" id="Edad" asp-for="Edad" />
+        <span asp-validation-for="Edad"></span>
+    </div>
+    <div>
+        <label asp-for="Email">Correo Electrónico:</label>
+        <input type="email" id="Email" asp-for="Email"/>
+        <span asp-validation-for="Email"></span>
+    </div>
+    
+    <div>
+        <label asp-for="Password">Contraseña:</label>
+        <input type="password" id="Password" asp-for="Password"/>
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <input type="submit" value="Registrar" />
+    </div>
+</form>
